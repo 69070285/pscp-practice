@@ -7,8 +7,13 @@ def main():
         print("0")
         return
     first = set(input().split())
-    second = set(input().split())
+    count = 0
 
-    print(len(first & second))
+    for n in input().split():
+        if n in first:
+            count += 1
+            first.remove(n)
+
+    print(count)
 
 main()
